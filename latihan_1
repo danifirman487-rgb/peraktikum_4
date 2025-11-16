@@ -1,0 +1,27 @@
+# Buat sebuah list sebanyak 5 elemen dengan nilai bebas
+# Akses list:
+a = [8, 10, 12, 14, 16]
+print(a[3])
+print(a[1:4])
+print(a[4])
+A = [30, 40, 50, 60, 70]
+
+# Ubah elemen list:
+print(A[3])
+print(A[1:4])
+print(A[4])
+
+# Tambah elemen list:
+A[3] = 99
+A[3:] = [99, 100, 150]
+print(A)
+
+# Tambah elemen list:
+B = A[:2]
+B.append("hello")
+B.extend([200, 300, 400])
+print(B)
+
+# Gabungkan list B dengan list A
+gabungan = B + A
+print("Gabungan list B dan A:", gabungan)
