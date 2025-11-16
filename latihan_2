@@ -1,0 +1,29 @@
+data_mahasiswa = []
+
+while True:
+    nama = input("nama: ")
+    nim = input("nim : ")
+    tugas = float(input("nilai Tugas (0-100): "))
+    uts = float(input("nilai UTS (0-100): "))
+    uas = float(input(" nilai UAS (0-100): "))
+
+    nilai_akhir = (0.30 * tugas) + (0.35 * uts) + (0.35 * uas)
+
+    data_mahasiswa.append({
+        "Nama": nama,
+        "Nim": nim,
+        "Tugas": tugas,
+        "UTS": uts,
+        "UAS": uas,
+        "Nilai Akhir": round(nilai_akhir, 2)
+    })
+
+    lanjut = input("Tambah data lagi? (y/t): ")
+    if lanjut == 't':
+        break
+print("=" * 65)
+print("| no |  nama      | nim   | tugas   | uts    | uas    | akhir  |")
+print("=" * 65)
+for i, mhs in enumerate(data_mahasiswa, start=1):
+    print(f"|{i}   |  {mhs['Nama']}     |   {mhs['Nim']}  |  {mhs['Tugas']}  |   {mhs['UTS']}  |  {mhs['UAS']}  | {mhs['Nilai Akhir']}  |  ")
+print("=" * 65)
